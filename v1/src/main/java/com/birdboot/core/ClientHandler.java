@@ -10,9 +10,8 @@ public class ClientHandler implements Runnable {
         this.socket = socket;
     }
     public void run(){
-        InputStream in= null;
         try {
-            in = socket.getInputStream();
+            InputStream in = socket.getInputStream();
             int d;
             while((d = in.read())!=-1){
                 System.out.print((char)d);
